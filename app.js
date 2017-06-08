@@ -94,7 +94,7 @@ else {
   alert('Sorry, that\'s wrong, I was born in California!');
 }
 
-var sports = prompt('I love sports. I am an avid NFL (Go Hawks),NBA, and most Olympic sports fan! Did I play sports in Junior or Senior High School?', 'yes or no?');
+var sports = prompt('I love sports. I am an avid NFL (Go Hawks!), NBA, and most Olympic sports fan! Did I play sports in Junior or Senior High School?', 'yes or no?');
 if (sports === 'yes' || sports === 'y') {
   alert('Sorry, that\'s wrong, I cheered from the sidelines!');
 }
@@ -105,7 +105,7 @@ else {
   alert('Sorry, that\'s wrong, I cheered from the sidelines!');
 }
 
-var university = prompt('I have always excelled in Math and Science and won several Math awards in High School. Did I major in Mathematics or a Natural Science in college?', 'yes or no?');
+var university = prompt('I have always excelled in Math and Science and won several awards in High School. Did I major in Mathematics or a Natural Science in college?', 'yes or no?');
 if (university === 'yes' || university === 'y') {
   alert('Sorry, that\'s wrong, I majored in History - remember I love a good story!');
 }
@@ -116,18 +116,18 @@ else {
   alert('Sorry, that\'s wrong, I majored in History');
 }
 
-var music = prompt('I enjoy many musical genres. I have been to \'Who\', \'Earth,Wind,& Fire\' and \'Loreena NcKennitt\' concerts; I have had season tickets to the Seattle Opera, and I have \'Sia\' and \'Flo-rida\' on my music app. I generally do not like hardcore hip-hop or heavy metal. Do I like country music?');
+var music = prompt('I enjoy many musical genres. I have been to \'Who\', \'Earth,Wind,& Fire\' and \'Loreena NcKennitt\' concerts; I have had season tickets to the Seattle Opera, and I have \'Sia\' and \'Flo-rida\' on my music app. Do I like country music?', 'yes or no');
 if (music === 'yes' || music === 'y') {
   alert('Right! I like many country music songs and artists');
 }
 else if (music === 'no' || music === 'n'){
-  alert('Sorry that\'s wrong! Country music is a great american musical genre that has the same roots as gospel and r&b music!');
+  alert('Sorry that\'s wrong! Country music is an awesome American musical genre that has the same roots as gospel and r&b music!');
 }
 else {
-  alert('Sorry that\'s wrong! Country music is a great american musical genre');
+  alert('Sorry that\'s wrong! Country music is an awesome American musical genre');
 }
 
-var programming = prompt('Right now, I am studying javascript. Have I studied other programming languages?');
+var programming = prompt('Right now, I am studying javascript. Have I studied other programming languages?', 'yes or no');
 if (programming === 'yes' || programming === 'y') {
   alert('Right! I have studied Ruby and Python!');
 }
@@ -135,7 +135,7 @@ else if (programming === 'no' || programming === 'n'){
   alert('Sorry that\'s wrong! Sometimes I am a Rubyist or a Pythonista!');
 }
 else {
-  alert('Sorry that\'s wrong! I have studied Ruby and Python!');
+  alert('Sorry that\'s wrong! I have studied Ruby and Python!', 'yes or no');
 }
 
 //guessing a number game
@@ -147,9 +147,9 @@ var correct = Math.ceil((Math.random() * 26));
 var tries = 4;
 while (tries > 0) {
   var guess = prompt('Please guess a number between 1 and 25.');
-  if (guess === ' ') {
+  if (!guess) {
     alert('Oops! You broke my game!');
-    console.log('correct: ' + correct + '  guess: ' + guess);
+    break;
   }
   else if (guess > correct) {
     alert('Too high! Try again. You have ' + tries + ' guesses remaining!');
@@ -165,5 +165,6 @@ while (tries > 0) {
     break;
   }
   tries--;
+  The correct answer is ' + correct + '!'
 }
-alert('You have ' + tries + ' guesses remaining. ' + 'Better luck next time! The correct answer is ' + correct + '!');
+alert('Better luck next time!'');
